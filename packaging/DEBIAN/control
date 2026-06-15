@@ -1,0 +1,16 @@
+Package: gwsm
+Version: {{VERSION}}
+Architecture: {{ARCH}}
+Maintainer: Mike Ryan <public@ambershark.com>
+Homepage: https://github.com/ambershark-mike/gwsm
+Section: utils
+Priority: optional
+Description: Gnome Window State Manager
+ A CLI daemon that saves and restores window geometry (position, size,
+ workspace, monitor) for GNOME Shell under Wayland.
+ .
+ GNOME does not natively remember window layouts across application launches.
+ gwsm fills that gap by saving named profiles and automatically restoring
+ windows as they open.
+ .
+ Requires the window-calls GNOME Shell extension to be installed and enabled.

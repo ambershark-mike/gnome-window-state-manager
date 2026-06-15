@@ -1,0 +1,13 @@
+#!/bin/sh
+set -e
+
+# Reload the systemd daemon so it picks up the new user service unit.
+systemctl daemon-reload || true
+
+echo ""
+echo "gwsm installed successfully."
+echo ""
+echo "To enable the auto-restore daemon, run:"
+echo ""
+echo "  systemctl --user enable --now gwsm"
+echo ""

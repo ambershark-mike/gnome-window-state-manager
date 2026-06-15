@@ -1,0 +1,48 @@
+# gwsm sample configuration file
+#
+# Copy this file to ~/.config/gwsm/config.toml and edit as needed.
+# All settings are optional — omitting a setting uses the default shown here.
+# The config file itself is optional; gwsm works fine without one.
+
+# ---------------------------------------------------------------------------
+# Daemon polling
+# ---------------------------------------------------------------------------
+
+# How often (in milliseconds) the daemon checks for newly opened windows.
+# Lower values make the daemon react faster but wake the CPU more frequently.
+# Recommended range: 250–1000 ms.
+#   Desktop:        250–500 ms  (no battery concern)
+#   Laptop/battery: 500–1000 ms (preserves idle sleep states)
+poll_interval_ms = 1000
+
+# How long (in milliseconds) the daemon waits after detecting a new window
+# before applying saved geometry. This gives the application time to finish
+# its own startup positioning before gwsm overrides it.
+# Too low and some apps (especially Electron apps) will fight back and win.
+# Recommended range: 300–800 ms.
+restore_delay_ms = 500
+
+# ---------------------------------------------------------------------------
+# Profiles
+# ---------------------------------------------------------------------------
+
+# The profile name the daemon loads on startup, and the default used by
+# gwsm save / restore / show when no profile is specified.
+default_profile = "default"
+
+# ---------------------------------------------------------------------------
+# Storage
+# ---------------------------------------------------------------------------
+
+# Path to the JSON file where window layout profiles are stored.
+# Leave empty to use the default: ~/.local/share/gwsm/state.json
+state_file = ""
+
+# ---------------------------------------------------------------------------
+# Logging
+# ---------------------------------------------------------------------------
+
+# Path to a log file for daemon output.
+# Leave empty to write logs to stdout (captured by journald when running as
+# a systemd user service).
+log_file = ""

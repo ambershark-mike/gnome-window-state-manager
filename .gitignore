@@ -1,0 +1,29 @@
+# Compiled binary (root-level only, not the cmd/gwsm/ source directory)
+/gwsm
+
+# Package output
+/dist/
+
+# Go build cache
+*.test
+*.out
+coverage.out
+
+# Go module download cache (not the go.sum, keep that)
+/vendor/
+
+# Editor artifacts
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# AI config (personal overrides — don't commit)
+CLAUDE.local.md
+AGENTS.local.md
+.claude/
+
+# OS artifacts
+.DS_Store
+Thumbs.db

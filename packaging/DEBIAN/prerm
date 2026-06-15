@@ -1,0 +1,7 @@
+#!/bin/sh
+set -e
+
+# Reload so systemd forgets the unit on removal.
+# Users who enabled the service should run:
+#   systemctl --user disable --now gwsm
+systemctl daemon-reload || true

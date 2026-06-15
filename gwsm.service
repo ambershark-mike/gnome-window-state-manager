@@ -1,0 +1,22 @@
+[Unit]
+Description=Gnome Window State Manager — window geometry auto-restore daemon
+Documentation=https://github.com/ambershark/gwsm
+# Wait for the GNOME session D-Bus to be available
+After=graphical-session.target
+PartOf=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/gwsm daemon
+Restart=on-failure
+RestartSec=5s
+
+# Give GNOME Shell a moment to settle before the first poll
+ExecStartPre=/bin/sleep 3
+
+# Keep logs in the journal
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=graphical-session.target
