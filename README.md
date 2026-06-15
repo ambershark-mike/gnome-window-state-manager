@@ -182,6 +182,69 @@ gwsm daemon --profile work
 
 ---
 
+## Shell Completions
+
+`gwsm completion` generates shell autocompletion scripts for bash, zsh, fish, and
+PowerShell. It is provided automatically by the Cobra CLI framework — no extra
+setup is needed in the binary.
+
+```bash
+# View available shells
+gwsm completion --help
+
+# All subcommands accept --no-descriptions to omit annotation text
+gwsm completion bash --no-descriptions
+```
+
+### Bash
+
+```bash
+# On-demand (add to ~/.bashrc)
+source <(gwsm completion bash)
+
+# Persistent (Linux)
+gwsm completion bash > ~/.local/share/bash-completion/completions/gwsm
+
+# Persistent (macOS)
+gwsm completion bash > $(brew --prefix)/etc/bash_completion.d/gwsm
+```
+
+Requires the `bash-completion` package. Install it via your package manager
+if not already present.
+
+### Zsh
+
+```bash
+# On-demand (add to ~/.zshrc)
+source <(gwsm completion zsh)
+
+# Persistent — save to a directory in your $fpath
+gwsm completion zsh > "${fpath[1]}/_gwsm"
+```
+
+Make sure `compinit` is loaded in your `~/.zshrc` (usually via `autoload -Uz
+compinit && compinit`).
+
+### Fish
+
+```bash
+gwsm completion fish > ~/.config/fish/completions/gwsm.fish
+```
+
+### PowerShell
+
+```powershell
+gwsm completion powershell | Out-String | Invoke-Expression
+```
+
+Or save to a module directory:
+
+```powershell
+gwsm completion powershell > "$HOME\Documents\PowerShell\Completions\gwsm.ps1"
+```
+
+---
+
 ## Configuration
 
 Optional config file at `~/.config/gwsm/config.toml`:
