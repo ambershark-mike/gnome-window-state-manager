@@ -4,7 +4,7 @@ GNOME does not remember window positions, sizes, or workspaces across applicatio
 
 It saves a snapshot of your window layout into a named **profile** and then — either on demand or automatically via a background daemon — restores each window to its saved geometry when it appears.
 
-**NOTE**: This only works for Gnome on Wayland.  It is specifically designed to fill the hole that devilspie filled on X11.
+**NOTE**: This only works for Gnome on Wayland.  It is specifically designed to fill the hole that [devilspie2](https://www.nongnu.org/devilspie2/) filled on X11.
 
 ---
 
@@ -359,6 +359,18 @@ internal/state/    Profile persistence (JSON)
 internal/config/   Config file handling (TOML)
 internal/daemon/   Background polling daemon
 ```
+
+---
+
+## Credits
+
+Thanks to domandoman for the [Window Calls extension](https://extensions.gnome.org/extension/4724/window-calls/) for gnome that allows this to exist.
+
+---
+
+## Contributing
+
+All contributions are welcome.  Feel free to submit pull requests.
 
 ---
 
