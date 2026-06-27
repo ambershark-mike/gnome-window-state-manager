@@ -378,6 +378,8 @@ All contributions are welcome.  Feel free to submit pull requests.
 
 Copyright (C) 2026 Mike Ryan
 
+If you fork and or use this code in your own projects, make sure the license stays intact and please add a link and reference to the original project in your credits.
+
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
